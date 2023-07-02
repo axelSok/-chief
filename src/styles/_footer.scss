@@ -1,39 +1,62 @@
 .footer {
+    $root: &;
     background-color: $light-gray;
 
     &__content {
+        display: grid;
+        column-gap: 60px;
+        grid-template-columns: 120px min-content min-content auto;
+        grid-template-areas:
+            "logo  navigation contacts      contacts"
+            ".     navigation . ."
+            ".     navigation public-offers socials"
+
+    }
+
+    &__logo {
+        grid-area: logo;
+
+        img {
+            width: 120px;
+        }
+    }
+
+    &__navigation {
+        grid-area: navigation;
+        padding: 45px 0;
+    }
+
+    &__contacts {
+        grid-area: contacts;
+        justify-self: stretch;
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
+        padding: 45px 0 0 0;
     }
 
-    &__navigation,
-    &__contacts {
-        margin: 45px 0 45px 60px;
+    &__public-offers {
+        grid-area: public-offers;
+        padding: 0 0 45px 0;
     }
 
-    &__contacts {
+    &__socials {
+        grid-area: socials;
+        justify-self: stretch;
         display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: space-between;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 0 45px 0;
+    }
 
-        &-main,
-        &-socials {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    a {
+        color: $black;
+        text-decoration: none;
+        white-space: nowrap;
 
-        &-main {
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        ul.phones {
-            li {
-                display: flex;
-                align-items: center;
-            }
+        &:hover {
+            color: $red;
+            text-decoration: underline;
         }
     }
 
@@ -41,27 +64,9 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-
-        a {
-            color: $black;
-            text-decoration: none;
-
-            &:hover {
-                color: $red;
-                text-decoration: underline;
-            }
-        }
     }
 
-
-
-
-    ul.socials {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-
+    .socials {
         li {
             width: 30px;
             height: 30px;
@@ -72,49 +77,96 @@
         }
     }
 
-    @include media-breakpoint-down(lg) {
-
-        &__navigation {
-            margin: 45px 0 45px 40px;
-        }
-
-        &__contacts-socials {
-            flex-direction: column-reverse;
-            align-items: flex-start;
-        }
-
-        .socials {
-            width: 100%;
-            justify-content: flex-end;
-        }
-
-        ul.phones {
+    @include media-breakpoint-down(xl) {
+        .phones {
             li+li {
                 margin-top: 10px;
             }
         }
     }
 
+    @include media-breakpoint-down(lg) {
+        &__content {
+            grid-template-areas:
+                "logo  navigation contacts      contacts"
+                ".     navigation socials       socials"
+                ".     navigation . ."
+                ".     navigation public-offers .";
+        }
+
+        &__socials {
+            padding: 10px 0 0 0;
+        }
+    }
+
+    @media screen and (max-width: 790px) {
+        &__content {
+            grid-template-areas:
+                "logo    navigation contacts"
+                ".       navigation contacts"
+                "socials socials    public-offers";
+        }
+
+        &__socials,
+        &__public-offers {
+            padding: 0 0 40px 0;
+        }
+    }
+
     @include media-breakpoint-down(md) {
+        &__logo {
+            img {
+                width: 100px;
+            }
+        }
+
+        &__content {
+            grid-template-columns: 100px min-content min-content;
+            gap: 0;
+        }
+
         &__navigation,
         &__contacts {
-            margin-bottom: 25px;
-        }
-        
-        &__contacts-main {
-            flex-direction: column;
-            align-items: flex-start;
+            padding: 20px 0px 0px 45px;
         }
 
-        &__contacts-socials {
+        &__socials,
+        &__public-offers {
+            padding: 25px 0 20px 45px;
+        }
+
+        &__public-offers {
             font-size: 12px;
-            margin-bottom: 20px;
-            flex-direction: row-reverse;
-            gap: 70px;
+
+            &#{$root}__links {
+                gap: 5px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 580px) {
+        &__content {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 40px;
+            grid-template-areas:
+                "socials    socials"
+                "navigation contacts"
+                "navigation contacts"
+                "logo       public-offers";
         }
 
-        .socials {
-            width: initial;
+        &__socials {
+            padding: 30px 0 0 0;
+            justify-content: center;
+        }
+
+        &__navigation,
+        &__contacts {
+            padding: 0;
+        }
+
+        &__public-offers {
+            padding: 20px 0 0 0;
         }
     }
 }
