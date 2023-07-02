@@ -1,0 +1,92 @@
+.banner-header,
+.main-header {
+    color: $white;
+    z-index: $zindex-fixed;
+}
+
+.banner-header {
+    position: fixed;
+    height: $header-bar-height;
+    background: $dark-gray;
+    opacity: 0.8;
+
+    &--hidden {
+        .logo {
+            visibility: hidden;
+        }
+    }
+}
+
+.main-header {
+    $root: &;
+
+    position: fixed;
+    height: $header-height;
+    padding-top: $header-bar-height;
+
+    transition: all 0.5s ease;
+
+    &--sticky {
+        padding-top: 0;
+        background: $dark-gray;
+    }
+
+    @media (max-width: 991.98px) {
+        .offcanvas-collapse {
+            position: fixed;
+            top: 56px;
+            /* Height of navbar */
+            bottom: 0;
+            left: 100%;
+            width: 100%;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            overflow-y: auto;
+            visibility: hidden;
+            background-color: #343a40;
+            transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+
+            &.open {
+                visibility: visible;
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+
+        .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            color: rgba(255, 255, 255, .75);
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    .nav-underline {
+        .nav-link {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            font-size: .875rem;
+            color: #6c757d;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        .active {
+            font-weight: 500;
+            color: #343a40;
+        }
+    }
+}

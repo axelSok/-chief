@@ -16,10 +16,5 @@ export default defineConfig({
                 entryFileNames: 'assets/js/[name]-[hash].js'
             },
         },
-    },
-    googleFonts: {
-        families: {
-            'Cormorant+Garamond': [300, 400, 500]
-        }
-      }
+    }
 })

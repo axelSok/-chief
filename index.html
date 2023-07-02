@@ -3,19 +3,187 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + TS</title>
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet"> -->
+  <title>Кухни под заказ в Минске » Заказать кухню ➤ каталог, фото и цены на мебель кухни, изготовление по
+    индивидуальным размерам и дизайн-проекту</title>
+  <link rel="stylesheet" href="/src/styles/index.scss">
+  <script type="module" src="/src/main.ts"></script>
 </head>
 
 <body>
+  <div class="banner-header position-fixed w-100">
+    <div class="container">
+      <div class="logo">
+        <a class="py-0 me-0" href="#"><img src="/assets/images/logo.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <!-- NAVIGATION START -->
+  <header class="main-header position-fixed w-100">
+    <nav class="main-header__navigation navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+      <div class="container">
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbar-side-collapse"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbar-items">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Кухни</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Корпусная мебель</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Портфолио</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Покупателям</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Акции</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- NAVIGATION END -->
+
   <div id="app"></div>
-  <button type="button" class="btn btn-primary">Base class</button>
-  <img src="/assets/images/logo-header.svg" alt="Vite Logo" />
-  <script type="module" src="/src/main.ts"></script>
+
+  <!-- TOP BANNER START -->
+  <section class="main-banner position-relative overflow-hidden">
+    <div class="container">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+          <div class="position-relative left-hero-color">
+            <h1 class="mb-0 fw-bold">
+              Discover Your Visual Investment Manager
+            </h1>
+            <p>The project management tool you love.</p>
+            <a href="#" class="btn btn-warning btn-hover-secondery"><span class="d-inline-block me-2"><i
+                  class="ti ti-playstation-triangle"></i></span> Discover this Video</a>
+          </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+          <div class="position-relative right-hero-color">
+            <img src="/assets/images/hero/right-image.svg" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOP BANNER END -->
+
+  <!-- FEATURES START -->
+  <section class="service position-relative overflow-hidden">
+    <div class="container position-relative">
+      <img src="/assets/images/service/dot-shape.png" class="shape position-absolute">
+      <div class="row">
+        <div class="col-12"><small class="fs-7 d-block">Working Process</small></div>
+        <div
+          class="col-12 d-xxl-flex d-xl-flex d-lg-flex d-md-flex d-sm-block d-block align-items-center justify-content-xxl-between justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-between justify-content-sm-center ">
+          <h2 class="fs-2 text-black mb-0">Our Featured Service<br> that We Provide</h2>
+          <a href="#" class="btn btn-warning btn-hover-secondery section-btn">All Services</a>
+        </div>
+      </div>
+      <div class="row d-flex flex-wrap justify-content-center step-row">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <div
+                class="icon-round overflow-hidden rounded-circle position-relative d-flex align-items-center justify-content-center mx-auto text-center">
+                <i class="ti ti-download text-primary position-relative"></i>
+              </div>
+              <h5 class="mb-0 fw-500">Step 1</h5>
+              <h3 class="fs-4">Download our App</h3>
+              <p class="fs-7 mb-0 fw-500">There are many variations of pass for ages of oremsum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <div
+                class="icon-round overflow-hidden rounded-circle position-relative d-flex align-items-center justify-content-center mx-auto text-center">
+                <i class="ti ti-user text-primary position-relative"></i>
+              </div>
+              <h5 class="mb-0 fw-500">Step 2</h5>
+              <h3 class="fs-4">Create a free Account</h3>
+              <p class="fs-7 mb-0 fw-500">There are many variations of pass for ages of oremsum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <div
+                class="icon-round overflow-hidden rounded-circle position-relative d-flex align-items-center justify-content-center mx-auto text-center">
+                <i class="ti ti-gift text-primary position-relative"></i>
+              </div>
+              <h5 class="mb-0 fw-500">Step 3</h5>
+              <h3 class="fs-4">Now Start your Journey</h3>
+              <p class="fs-7 mb-0 fw-500">There are many variations of pass for ages of oremsum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FEATURES END -->
+
+  <!-- FOOTER START -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="footer-logo-col">
+            <a href="#"><img src="/assets/images/logo.svg"></a>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
+          <h5 class="text-white">Social</h5>
+          <ul class="list-unstyled mb-0 pl-0">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
+          <h5 class="text-white">Company</h5>
+          <ul class="list-unstyled mb-0 pl-0">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Affiliates</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Legal &amp; Privacy</a></li>
+          </ul>
+        </div>
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="subscribe">
+            <h5 class="text-white">Subscribe</h5>
+            <p class="blue-light fw-500">Subscribe to get the latest news form us
+            </p>
+            <div class="input-group">
+              <input type="email" class="form-control br-15" placeholder="Enter email address"
+                aria-label="Enter email address" aria-describedby="button-addon2">
+              <button class="btn btn-warning btn-hover-secondery ms-xxl-2 ms-xl-2 ls-lg-0 ms-md-0 ms-sm-0 ms-0"
+                type="button" id="button-addon2">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+
+  
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+.main-banner {
+    padding-bottom: 70px;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-image: url(../../assets/images/pages/top-main-bg.png);
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+}
