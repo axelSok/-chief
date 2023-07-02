@@ -1,3 +1,22 @@
+.header {
+    z-index: $zindex-fixed;
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        
+        &-top {
+            height: $header-bar-height;
+            background: $dark-gray;
+            opacity: 0.8;
+        }
+
+        &-bottom {
+            height: $header-height;
+        }
+    }
+}
+
 .banner-header,
 .main-header {
     color: $white;

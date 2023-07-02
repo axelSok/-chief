@@ -12,43 +12,54 @@
 </head>
 
 <body>
-  <div class="banner-header position-fixed w-100">
-    <div class="container">
-      <div class="logo">
-        <a class="py-0 me-0" href="#"><img src="/assets/images/logo.svg" alt=""></a>
-      </div>
-    </div>
-  </div>
   <!-- NAVIGATION START -->
-  <header class="main-header position-fixed w-100">
-    <nav class="main-header__navigation navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
-      <div class="container">
-        <button class="navbar-toggler p-0 border-0" type="button" id="navbar-side-collapse"
-          aria-label="Toggle navigation">
+  <header class="header position-fixed w-100">
+    <nav class="header__navigation navbar navbar-static-top navbar-expand-lg">
+      <div class="header__navigation-top container d-none d-lg-block">
+        <div class="container">
+          <div class="logo">
+            <a class="py-0 me-0" href="#"><img src="/assets/images/logo.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="header__navigation-top container d-lg-none">
+        <a class="navbar-brand" href="#"><img src="/assets/images/logo.svg" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="navbar-collapse offcanvas-collapse" id="navbar-items">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Кухни</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Корпусная мебель</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Портфолио</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Покупателям</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Акции</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Контакты</a>
-            </li>
-          </ul>
+      </div>
+      <div class="container">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Кухни</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Корпусная мебель</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Портфолио</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Покупателям</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Акции</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -141,49 +152,137 @@
   <!-- FOOTER START -->
   <footer class="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
-          <div class="footer-logo-col">
-            <a href="#"><img src="/assets/images/logo.svg"></a>
-          </div>
+      <div class="footer__content">
+        <div class="footer__logo">
+          <a href="#"><img src="/assets/images/logo.svg"></a>
         </div>
-        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
-          <h5 class="text-white">Social</h5>
-          <ul class="list-unstyled mb-0 pl-0">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
+        <div class="footer__navigation">
+          <ul class="footer__links list-unstyled mb-0 pl-0">
+            <li><a href="#">Кухни</a></li>
+            <li><a href="#">Корпусная мебель</a></li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Покупателям</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </div>
-        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
-          <h5 class="text-white">Company</h5>
-          <ul class="list-unstyled mb-0 pl-0">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Affiliates</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Legal &amp; Privacy</a></li>
-          </ul>
-        </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
-          <div class="subscribe">
-            <h5 class="text-white">Subscribe</h5>
-            <p class="blue-light fw-500">Subscribe to get the latest news form us
-            </p>
-            <div class="input-group">
-              <input type="email" class="form-control br-15" placeholder="Enter email address"
-                aria-label="Enter email address" aria-describedby="button-addon2">
-              <button class="btn btn-warning btn-hover-secondery ms-xxl-2 ms-xl-2 ls-lg-0 ms-md-0 ms-sm-0 ms-0"
-                type="button" id="button-addon2">Register</button>
+        <div class="footer__contacts">
+          <div class="footer__contacts-main">
+            <ul class="footer__links list-unstyled mb-0 pl-0">
+              <li><a href="#">Архитектору и дизайнеру</a></li>
+              <li><a href="#">Франшиза</a></li>
+              <li><a href="#">Салоны</a></li>
+            </ul>
+            <div class="d-flex">
+              <div class="d-none d-lg-flex flex-column align-items-stretch me-4">
+                <button class="btn btn-primary mb-1">Заказать звонок</button>
+                <button class="btn btn-primary">Рассчитать стоимость</button>
+              </div>
+              <ul class="phones list-unstyled mb-0 pl-0">
+                <li>
+                  <a href="#">
+                    <img src="/assets/images/icons/a1.svg" class="rounded float-start" alt="...">
+                  </a>
+                  <span>+375 (29) 727-10-10</span>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/assets/images/icons/mts.svg" class="rounded float-start" alt="...">
+                  </a>
+                  <span>+375 (44) 727-10-10</span>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/assets/images/icons/email.svg" class="rounded float-start" alt="...">
+                  </a>
+                  <span>info@shefkuhni.by</span>
+                </li>
+              </ul>
             </div>
           </div>
+          <div class="footer__contacts-socials d-none d-md-flex">
+            <ul class="footer__links list-unstyled mb-0 pl-0">
+              <li><a href="#">Договор публичной оферты</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+            </ul>
+            <ul class="socials list-unstyled mb-0 pl-0">
+              <li>
+                <a href="#">
+                  <img src="/assets/images/icons/facebook.svg" class="rounded float-start" alt="...">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/images/icons/vk.svg" class="rounded float-start" alt="...">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/images/icons/p.svg" class="rounded float-start" alt="...">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/images/icons/inst.svg" class="rounded float-start" alt="...">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/images/icons/youtybe.svg" class="rounded float-start" alt="...">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/images/icons/odn.svg" class="rounded float-start" alt="...">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__contacts-socials d-md-none">
+          <ul class="footer__links list-unstyled mb-0 pl-0">
+            <li><a href="#">Договор публичной оферты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+          <ul class="socials list-unstyled mb-0 pl-0">
+            <li>
+              <a href="#">
+                <img src="/assets/images/icons/facebook.svg" class="rounded float-start" alt="...">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/assets/images/icons/vk.svg" class="rounded float-start" alt="...">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/assets/images/icons/p.svg" class="rounded float-start" alt="...">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/assets/images/icons/inst.svg" class="rounded float-start" alt="...">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/assets/images/icons/youtybe.svg" class="rounded float-start" alt="...">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/assets/images/icons/odn.svg" class="rounded float-start" alt="...">
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </footer>
   <!-- FOOTER END -->
 
-  
+
 </body>
 
 </html>

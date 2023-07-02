@@ -1,44 +1,120 @@
-.footer{
-    padding:170px 0 100px;
-    background-color: $blue;
-    .footer-logo-col{
-        padding-right: 120px;
-        p{
-            padding: 35px 0 30px;
-            line-height: 30px;
-        }
-        .callus{
-            line-height: 30px;
-        }
+.footer {
+    background-color: $light-gray;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
     }
-    h5{
-        padding-bottom: 30px;
+
+    &__navigation,
+    &__contacts {
+        margin: 45px 0 45px 60px;
     }
-    ul{
-        li{
-            a{
-                display: block;
-                padding-bottom: 25px;
-                text-decoration: none;
-                color:$blue-300;
-                font-weight:$font-weight-medium;
-                &:hover{
-                    color: $warning;
-                }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+
+        &-main,
+        &-socials {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-main {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        ul.phones {
+            li {
+                display: flex;
+                align-items: center;
             }
         }
     }
-    .subscribe{
-        .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating){
-            border-top-right-radius: $border-radius-lg;
-            border-bottom-right-radius: $border-radius-lg;
-        }
-        .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
-            border-top-left-radius: $border-radius-lg;
-            border-bottom-left-radius: $border-radius-lg;
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a {
+            color: $black;
+            text-decoration: none;
+
+            &:hover {
+                color: $red;
+                text-decoration: underline;
+            }
         }
     }
-    .copyrights{
-        padding-top: 70px;
+
+
+
+
+    ul.socials {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+            width: 30px;
+            height: 30px;
+        }
+
+        li+li {
+            margin-left: 1rem;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+
+        &__navigation {
+            margin: 45px 0 45px 40px;
+        }
+
+        &__contacts-socials {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+
+        .socials {
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        ul.phones {
+            li+li {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__navigation,
+        &__contacts {
+            margin-bottom: 25px;
+        }
+        
+        &__contacts-main {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__contacts-socials {
+            font-size: 12px;
+            margin-bottom: 20px;
+            flex-direction: row-reverse;
+            gap: 70px;
+        }
+
+        .socials {
+            width: initial;
+        }
     }
 }
