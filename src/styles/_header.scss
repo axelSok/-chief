@@ -13,12 +13,27 @@
     }
 
     &__navigation {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__phones {
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 400;
+
+        img {
+            height: 18px;
+            width: 18px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+        }
     }
 
     // Bootstrap navbar
-    .nav .nav-item .nav-link {
+    .nav-link {
         color: $white;
         text-decoration: none;
 
@@ -30,5 +45,11 @@
     // Bootstrap mobile menu
     .offcanvas {
         background: $dark-gray;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__navigation {
+            font-size: 16px;
+        }
     }
 }
