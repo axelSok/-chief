@@ -13,50 +13,61 @@
 
 <body>
   <!-- NAVIGATION START -->
-  <header class="header position-fixed w-100">
-    <nav class="header__navigation navbar navbar-static-top navbar-expand-lg">
-      <div class="header__navigation-top container d-none d-lg-block">
-        <div class="container">
-          <div class="logo">
-            <a class="py-0 me-0" href="#"><img src="/assets/images/logo.svg" alt=""></a>
+  <header class="header container-fluid fixed-top px-0">
+    <div class="header__top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="header__logo col">
+            <a href="/"
+              class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+              <img src="/assets/images/logo.svg" alt="">
+            </a>
+          </div>
+          <div class="col-8 d-flex align-items-center">
+            <ul class="nav flex-grow-1">
+              <li class="nav-item"><a href="#" class="nav-link px-2">Архитектору и дизайнеру</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2">Франшиза</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2">Салоны</a></li>
+              <li class="nav-item ms-auto"><a href="#" class="nav-link px-2">Ежедневно с 10:00 до 20:00</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="d-flex justify-content-end">
+              <div>
+                Минск
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="header__navigation-top container d-lg-none">
-        <a class="navbar-brand" href="#"><img src="/assets/images/logo.svg" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
+    </div>
+    <nav class="header__navigation">
       <div class="container">
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-8 d-flex align-items-center">
+            <ul class="nav flex-grow-1 justify-content-md-between">
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Кухни</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Корпусная мебель</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Портфолио</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Покупателям</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Акции</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Контакты</a> </li>
+            </ul>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Кухни</a>
+          <div class="col">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#">
+                  <img src="/assets/images/icons/a1.svg" class="rounded float-start" alt="...">
+                </a>
+                <span>+375 (29) 727-10-10</span>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Корпусная мебель</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Портфолио</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Покупателям</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Акции</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
+              <li>
+                <a href="#">
+                  <img src="/assets/images/icons/mts.svg" class="rounded float-start" alt="...">
+                </a>
+                <span>+375 (44) 727-10-10</span>
               </li>
             </ul>
           </div>
@@ -171,8 +182,8 @@
             <li><a href="#">Салоны</a></li>
           </ul>
           <div class="d-none d-xl-flex flex-column align-items-stretch">
-            <button class="btn btn-primary mb-1">Заказать звонок</button>
-            <button class="btn btn-primary">Рассчитать стоимость</button>
+            <button class="btn btn-ch-primary mb-1">Заказать звонок</button>
+            <button class="btn btn-ch-primary">Рассчитать стоимость</button>
           </div>
           <ul class="phones list-unstyled mb-0 pl-0">
             <li>

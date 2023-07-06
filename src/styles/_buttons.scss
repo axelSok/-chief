@@ -1,0 +1,37 @@
+.btn-ch-primary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: #{$white};
+    --bs-btn-bg: #{$red};
+    --bs-btn-border-color: #{$red};
+    --bs-btn-hover-color: #{$red};
+    --bs-btn-hover-bg: #{$white};
+    --bs-btn-hover-border-color: #{$red};
+    --bs-btn-focus-shadow-rgb: #{$red};
+    --bs-btn-active-color: #{$red};
+    --bs-btn-active-bg: #{$white};
+    --bs-btn-active-border-color: #{$red};
+    --bs-border-radius: 2px;
+
+    --bs-btn-disabled-color: #{$white};
+    --bs-btn-disabled-bg: #{$gray};
+    --bs-btn-disabled-border-color: #{$gray};
+}
+
+.btn-ch-secondary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: #{$red};
+    --bs-btn-bg: #{$white};
+    --bs-btn-border-color: #{$white};
+    --bs-btn-hover-color: #{$white};
+    --bs-btn-hover-bg: #{$red};
+    --bs-btn-hover-border-color: #{$white};
+    --bs-btn-focus-shadow-rgb: #{$white};
+    --bs-btn-active-color: #{$white};
+    --bs-btn-active-bg: #{$red};
+    --bs-btn-active-border-color: #{$white};
+    --bs-border-radius: 2px;
+
+    --bs-btn-disabled-color: #{$gray};
+    --bs-btn-disabled-bg: #{$white};
+    --bs-btn-disabled-border-color: #{$gray};
+}
