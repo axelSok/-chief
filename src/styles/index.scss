@@ -8,13 +8,15 @@
 @import "./_header.scss";
 @import "./_footer.scss";
 
-// body {
-//   font-family: $font-family;
-//   font-size: 1rem;
-//   font-weight: 400;
-//   transition: background-color 0.3s;
-//   transition: color 0.3s;
-// }
+@import "./_main.scss";
+
+body {
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.175px;
+  background: $white;
+}
 
 // h1,
 // h2,

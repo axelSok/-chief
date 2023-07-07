@@ -15,6 +15,9 @@
     --bs-btn-disabled-color: #{$white};
     --bs-btn-disabled-bg: #{$gray};
     --bs-btn-disabled-border-color: #{$gray};
+
+    --bs-btn-padding-y: 12px;
+    --bs-btn-padding-x: 30px;
 }
 
 .btn-ch-secondary {
@@ -34,4 +37,7 @@
     --bs-btn-disabled-color: #{$gray};
     --bs-btn-disabled-bg: #{$white};
     --bs-btn-disabled-border-color: #{$gray};
+
+    --bs-btn-padding-y: 12px;
+    --bs-btn-padding-x: 30px;
 }
