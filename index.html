@@ -14,7 +14,7 @@
 <body>
   <!-- NAVIGATION START -->
   <header class="header container-fluid fixed-top px-0">
-    <div class="header__top-bar ">
+    <div class="header__top-bar d-none d-lg-block">
       <div class="container">
         <div class="row">
           <div class="header__logo col">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-    <nav class="header__navigation">
+    <nav class="header__navigation d-none d-lg-block">
       <div class="container">
         <div class="row">
           <div class="col"></div>
@@ -82,6 +82,60 @@
                 <img src="/assets/images/icons/mts.svg" class="rounded float-start" alt="...">
                 <span>+375 (44) 727-10-10</span>
               </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="header__mobile navbar fixed-top d-lg-none">
+      <div class="container-fluid">
+        <div class="header__logo">
+          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+            <img src="/assets/images/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="ms-5">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Минск
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button">Минск</button></li>
+              <li><button class="dropdown-item" type="button">Москва</button></li>
+              <li><button class="dropdown-item" type="button">Алматы</button></li>
+              <li><button class="dropdown-item" type="button">Брянск</button></li>
+              <li><button class="dropdown-item" type="button">Актау</button></li>
+              <li><button class="dropdown-item" type="button">Волгоград</button></li>
+              <li><button class="dropdown-item" type="button">Калуга</button></li>
+              <li><button class="dropdown-item" type="button">Курск</button></li>
+              <li><button class="dropdown-item" type="button">Воронеж</button></li>
+              <li><button class="dropdown-item" type="button">Мозырь</button></li>
+              <li><button class="dropdown-item" type="button">Солигорск</button></li>
+              <li><button class="dropdown-item" type="button">Нур-Султан</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="me-4 ms-auto">
+          <span class="navbar-phone-icon"></span>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavbar"
+          aria-controls="mobileNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNavbar" aria-labelledby="mobileNavbarLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="navbar-closer btn-close btn-close-white ms-auto me-3"
+              data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Кухни</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Корпусная мебель</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Портфолио</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Покупателям</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Акции</a> </li>
+              <li class="nav-item"> <a class="nav-link px-2" href="#">Контакты</a> </li>
             </ul>
           </div>
         </div>
