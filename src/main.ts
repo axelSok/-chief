@@ -2,22 +2,22 @@
 // Import all of Bootstrap's JS
 import 'bootstrap'
 
-const mainHeader = document.querySelector<HTMLDivElement>('.main-header')
-const bannerHeader = document.querySelector<HTMLDivElement>('.banner-header')
+const header = document.querySelector<HTMLDivElement>('.header')
+const headerTopBar = document.querySelector<HTMLDivElement>('.header__top-bar')
 
 window.addEventListener('scroll', () => {
-    if (!bannerHeader || !mainHeader) {
+    if (!headerTopBar || !header) {
         return
     }
 
     const scrollPosition: number = window.scrollY;
 
-    if (scrollPosition > bannerHeader.offsetHeight) {
-        mainHeader.classList.add('main-header--sticky');
-        bannerHeader.classList.add('banner-header--hidden')
+    if (scrollPosition > 97) {
+        header.classList.add('header--scrolled')
+        headerTopBar.classList.add('header__top-bar--hidden')
     } else {
-        mainHeader.classList.remove('main-header--sticky');
-        bannerHeader.classList.remove('banner-header--hidden')
+        header.classList.remove('header--scrolled')
+        headerTopBar.classList.remove('header__top-bar--hidden')
     }
 });
 
