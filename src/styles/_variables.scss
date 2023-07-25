@@ -10,7 +10,6 @@ $black: #131313;
 
 // Layout
 $header-height: 80px;
-$header-bar-height: 63px;
 $footer-height: 80px;
 
 // Typography
@@ -21,11 +20,17 @@ $font-family-headers: 'Cormorant Garamond', serif !default;
 $font-family-base: $font-family;
 
 $headings-font-family: $font-family-headers;
+$headings-font-style:  normal;
+$headings-font-weight: 500;
+$headings-line-height: 150%;
 
 $navbar-brand-padding-y: 0;
 $navbar-brand-padding-x: 0;
 $navbar-brand-margin-end: 0;
 $navbar-padding-y: 0;
+
+$carousel-indicator-height: 2px;
+$carousel-indicator-spacer: 15px;
 
 $theme-colors: (
   "primary":    $red
