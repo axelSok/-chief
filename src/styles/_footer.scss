@@ -1,16 +1,17 @@
 .footer {
     $root: &;
     background-color: $light-gray;
-    font-size: 14px;
+    font-size: 16px;
 
     &__content {
         display: grid;
-        column-gap: 60px;
-        grid-template-columns: 120px min-content min-content auto;
+        grid-template-columns: 120px 55px 220px 370px 1fr 320px;
+        grid-template-rows: 120px 1fr 50px 1fr;
         grid-template-areas:
-            "logo  navigation contacts      contacts"
-            ".     navigation . ."
-            ".     navigation public-offers socials"
+            "logo  . navigation    navigation    . shops"
+            ".     . contacts      socials       . shops"
+            ".     . .             .             . shops"
+            ".     . public-offers .             . shops";
 
     }
 
@@ -22,155 +23,147 @@
         }
     }
 
+
     &__navigation {
         grid-area: navigation;
-        padding: 45px 0;
     }
 
     &__contacts {
         grid-area: contacts;
-        justify-self: stretch;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 45px 0 0 0;
-    }
 
-    &__public-offers {
-        grid-area: public-offers;
-        padding: 0 0 45px 0;
+        img {
+            height: 18px;
+            width: 18px;
+            margin-right: 5px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
     }
 
     &__socials {
         grid-area: socials;
-        justify-self: stretch;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0 0 45px 0;
-    }
 
-    a {
-        text-decoration: none;
-        white-space: nowrap;
-
-        &:hover {
-            text-decoration: underline;
+        img {
+            width: 37px;
+            height: 37px;
         }
     }
 
-    &__links {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .socials {
-        li {
-            width: 30px;
-            height: 30px;
-        }
+    &__public-offers {
+        grid-area: public-offers;
+        font-size: 14px;
 
         li+li {
-            margin-left: 1rem;
+            margin-top: 10px;
         }
     }
 
-    @include media-breakpoint-down(xl) {
-        .phones {
+    &__shops {
+        grid-area: shops;
+        max-width: 320px;
+
+        &-list {
+            margin-top: 10px;
+
             li+li {
                 margin-top: 15px;
             }
         }
     }
 
-    @include media-breakpoint-down(lg) {
-        &__content {
-            grid-template-areas:
-                "logo  navigation contacts      contacts"
-                ".     navigation socials       socials"
-                ".     navigation . ."
-                ".     navigation public-offers .";
-        }
+    a {
+        text-decoration: none;
 
-        &__socials {
-            padding: 10px 0 0 0;
+        &:hover {
+            text-decoration: underline;
         }
     }
 
-    @media screen and (max-width: 790px) {
+    @include media-breakpoint-down(xl) {
+        font-size: 14px;
+
+        &__socials {
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
         &__content {
+            grid-template-columns: 120px 30px 125px 30px 220px 1fr 320px;
+            grid-template-rows: 40px 80px 60px 1fr 40px 1fr;
             grid-template-areas:
-                "logo    navigation contacts"
-                ".       navigation contacts"
-                "socials socials    public-offers";
+                "logo  . .          .         .             . ."
+                "logo  . navigation .         contacts      . shops"
+                ".     . navigation .         .             . shops"
+                ".     . navigation .         public-offers . shops"
+                ".     . .          .         .             . shops"
+                ".     . socials    socials   socials       . .";
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__logo {
+            img {
+                width: 105px;
+            }
         }
 
-        &__contacts {
-            gap: 15px;
-            padding-bottom: 45px;
+        &__shops {
+            max-width: 100%;
         }
 
-        &__socials,
-        &__public-offers {
-            padding: 0 0 40px 0;
+        &__contacts,
+        &__navigation {
+            li+li {
+                margin-top: 5px;
+            }
+        }
+
+        &__socials {
+            li+li {
+                margin-left: 20px;
+
+            }
+        }
+
+        &__content {
+            grid-template-columns: 120px 40px 125px auto auto;
+            grid-template-rows: 25px 80px 60px 40px 30px 40px 1fr 40px auto 25px;
+            grid-template-areas:
+                "logo  . .             .             ."
+                "logo  . navigation    .             contacts"
+                ".     . navigation    .             ."
+                ".     . .             .             ."
+                ".     . socials       socials       ."
+                ".     . .             .             ."
+                ".     . shops         shops         ."
+                ".     . .             .             ."
+                ".     . public-offers public-offers ."
+                ".     . .             .             .";
         }
     }
 
     @include media-breakpoint-down(md) {
-        &__logo {
-            img {
-                width: 100px;
-            }
-        }
-
         &__content {
-            grid-template-columns: 100px min-content min-content;
-            gap: 0;
-        }
-
-        &__navigation,
-        &__contacts {
-            padding: 20px 0px 0px 45px;
-        }
-
-        &__socials,
-        &__public-offers {
-            padding: 25px 0 20px 45px;
-        }
-
-        &__public-offers {
-            font-size: 12px;
-
-            &#{$root}__links {
-                gap: 5px;
-            }
-        }
-    }
-
-    @media screen and (max-width: 550px) {
-        &__content {
-            grid-template-columns: 1fr 1fr;
-            row-gap: 40px;
+            grid-template-columns: auto auto;
+            grid-template-rows: 25px 80px 40px auto 35px auto 35px auto 35px auto 25px;
             grid-template-areas:
-                "socials    socials"
-                "navigation contacts"
-                "navigation contacts"
-                "logo       public-offers";
-        }
-
-        &__socials {
-            padding: 30px 0 0 0;
-            justify-content: center;
-        }
-
-        &__navigation,
-        &__contacts {
-            padding: 0;
-        }
-
-        &__public-offers {
-            padding: 20px 0 0 0;
+                "logo     ."
+                "logo     navigation"
+                ".        navigation"
+                "contacts navigation"
+                ".        ."
+                "socials  socials"
+                ".        ."
+                "shops    shops"
+                ".        ."
+                "public-offers public-offers"
+                ".        .";
         }
     }
 }

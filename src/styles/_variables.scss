@@ -10,6 +10,7 @@ $black: #131313;
 
 // Layout
 $header-height: 80px;
+$header-bar-height: 63px;
 $footer-height: 80px;
 
 // Typography
@@ -28,9 +29,11 @@ $navbar-brand-padding-y: 0;
 $navbar-brand-padding-x: 0;
 $navbar-brand-margin-end: 0;
 $navbar-padding-y: 0;
+$navbar-light-color: $white;
+$navbar-light-hover-color: $red;
+// $navbar-nav-link-padding-x: 1.25rem; // 20px or default 0.5rem
 
 $carousel-indicator-height: 2px;
-$carousel-indicator-spacer: 15px;
 
 $theme-colors: (
   "primary":    $red

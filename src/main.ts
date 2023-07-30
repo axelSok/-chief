@@ -1,31 +1,34 @@
 // import './styles/index.scss'
 // Import all of Bootstrap's JS
 import 'bootstrap'
+import { Popover } from 'bootstrap'
 
-const header = document.querySelector<HTMLDivElement>('.header')
-const headerTopBar = document.querySelector<HTMLDivElement>('.header__top-bar')
+document.querySelectorAll('[data-bs-toggle="popover"]')
+    .forEach(popover => new Popover(popover, {
+        trigger: 'focus'
+    }))
 
-window.addEventListener('scroll', () => {
-    if (!headerTopBar || !header) {
-        return
-    }
+// const header = document.querySelector<HTMLDivElement>('.header')
 
-    const scrollPosition: number = window.scrollY;
+// window.addEventListener('scroll', () => {
+//     if (!header) {
+//         return
+//     }
 
-    if (scrollPosition > 97) {
-        header.classList.add('header--scrolled')
-        headerTopBar.classList.add('header__top-bar--hidden')
-    } else {
-        header.classList.remove('header--scrolled')
-        headerTopBar.classList.remove('header__top-bar--hidden')
-    }
-});
+//     const scrollPosition: number = window.scrollY;
 
-const navbarSideCollapse = document.querySelector<HTMLDivElement>('#navbar-side-collapse')
+//     if (scrollPosition > 1) {
+//         header.classList.add('header--scrolled')
+//     } else {
+//         header.classList.remove('header--scrolled')
+//     }
+// });
 
-navbarSideCollapse?.addEventListener('click', () => {
-    const navbarItems = document.querySelector<HTMLDivElement>('#navbar-items')
-    navbarItems?.classList.toggle('open')
-})
+// const navbarSideCollapse = document.querySelector<HTMLDivElement>('#navbar-side-collapse')
+
+// navbarSideCollapse?.addEventListener('click', () => {
+//     const navbarItems = document.querySelector<HTMLDivElement>('#navbar-items')
+//     navbarItems?.classList.toggle('open')
+// })
 
 

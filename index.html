@@ -1,493 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Кухни под заказ в Минске » Заказать кухню ➤ каталог, фото и цены на мебель
+      кухни, изготовление по индивидуальным размерам и дизайн-проекту
+    </title>
+    <link rel="stylesheet" href="/src/styles/index.scss" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Кухни под заказ в Минске » Заказать кухню ➤ каталог, фото и цены на мебель кухни, изготовление по
-    индивидуальным размерам и дизайн-проекту</title>
-  <link rel="stylesheet" href="/src/styles/index.scss">
-  <script type="module" src="/src/main.ts"></script>
-</head>
-
-<body>
-  <!-- NAVIGATION START -->
-  <header class="header container-fluid fixed-top px-0">
-    <div class="header__top-bar d-none d-lg-block">
-      <div class="container">
-        <div class="row">
-          <div class="header__logo col">
-            <a href="/"
-              class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
-              <img src="/assets/images/logo.svg" alt="">
+  <body>
+    <!-- NAVIGATION START -->
+    <nav class="navigation navbar navbar-expand-lg fixed-top">
+      <div class="container-xl">
+        <a
+          class="navbar-brand link-body-emphasis text-decoration-none"
+          href="#"
+        >
+          <img src="/assets/images/logo.svg" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileNavbar"
+          aria-controls="mobileNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="mobileNavbar"
+          aria-labelledby="mobileNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="navbar-closer btn-close btn-close-white ms-auto me-3 mt-3"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body align-items-center">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  Кухник
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Современный стиль</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Неоклассический стиль</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Классический стиль</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Корпусная мебель</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Портфолио</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  О нас
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">О компании</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Архитектору и дизайнеру</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Франшиза</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Акции</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="phones list-unstyled my-0 d-flex flex-column">
+              <li>
+                <a
+                  class="text-decoration-none"
+                  href="tel:+375297271010"
+                  rel="nofollow"
+                >
+                  <img
+                    src="/assets/images/icons/a1.svg"
+                    class="rounded float-start"
+                  />
+                  +375 (29) 727-10-10
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-decoration-none"
+                  href="tel:+375447271010"
+                  rel="nofollow"
+                >
+                  <img
+                    src="/assets/images/icons/mts.svg"
+                    class="rounded float-start"
+                  />
+                  +375 (44) 727-10-10
+                </a>
+              </li>
+            </ul>
+            <a class="text-decoration-none ms-5" href="#">
+              <img
+                src="/assets/images/icons/search.svg"
+                class="rounded float-start"
+              />
             </a>
           </div>
-          <div class="col-8 d-flex align-items-center">
-            <ul class="nav flex-grow-1">
-              <li class="nav-item"><a href="#" class="nav-link px-2">Архитектору и дизайнеру</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2">Франшиза</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2">Салоны</a></li>
-            </ul>
-            <div class="nav-item ms-auto d-none d-xl-block">
-              <a href="#" class="nav-link px-2">Ежедневно с 10:00 до 20:00</a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVIGATION END -->
+
+    <main>
+      <div class="main-banner container-fluid position-absolute">
+        <div class="info d-flex align-items-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h1>Шеф Кухни</h1>
+                <p>Не просто мебель, а пространство объединяющее всё</p>
+                <a href="#" class="btn btn-ch-primary">В каталог</a>
+              </div>
             </div>
           </div>
-          <div class="col d-flex align-items-center justify-content-end">
+        </div>
+      </div>
+
+      <!-- TOP CAROUSEL START -->
+      <div
+        class="main-carousel carousel slide"
+        id="mainCarouselCaptions"
+        data-bs-ride="true"
+      >
+        <div class="carousel-indicators">
+          <div class="row flex-grow-1">
+            <button
+              class="col-2 flex-grow-1 active"
+              type="button"
+              data-bs-target="#mainCarouselCaptions"
+              data-bs-slide-to="0"
+              aria-label="Slide 1"
+              aria-current="true"
+            ></button>
+            <button
+              class="col-2 flex-grow-1"
+              type="button"
+              data-bs-target="#mainCarouselCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              class="col-2 flex-grow-1"
+              type="button"
+              data-bs-target="#mainCarouselCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              class="col-2 flex-grow-1"
+              type="button"
+              data-bs-target="#mainCarouselCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              class="col-2 flex-grow-1"
+              type="button"
+              data-bs-target="#mainCarouselCaptions"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              class="col-2 flex-grow-1"
+              type="button"
+              data-bs-target="#mainCarouselCaptions"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+          </div>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              src="assets/images/pages/top-main-bg.png"
+              alt="Image"
+            />
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <span>Новогодние скидки</span>
+                <h3>до 45%</h3>
+                <span>на кухни месяца до 31.12</span>
+                <a class="d-block" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              src="assets/images/pages/top-main-bg.png"
+              alt="Image"
+            />
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <span>Новогодние скидки</span>
+                <h3>до 45%</h3>
+                <span>на кухни месяца до 31.12</span>
+                <a class="d-block" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              src="assets/images/pages/top-main-bg.png"
+              alt="Image"
+            />
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <span>Новогодние скидки</span>
+                <h3>до 45%</h3>
+                <span>на кухни месяца до 31.12</span>
+                <a class="d-block" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              src="assets/images/pages/top-main-bg.png"
+              alt="Image"
+            />
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <span>Новогодние скидки</span>
+                <h3>до 45%</h3>
+                <span>на кухни месяца до 31.12</span>
+                <a class="d-block" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              src="assets/images/pages/top-main-bg.png"
+              alt="Image"
+            />
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <span>Новогодние скидки</span>
+                <h3>до 45%</h3>
+                <span>на кухни месяца до 31.12</span>
+                <a class="d-block" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+              src="assets/images/pages/top-main-bg.png"
+              alt="Image"
+            />
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <span>Новогодние скидки</span>
+                <h3>до 45%</h3>
+                <span>на кухни месяца до 31.12</span>
+                <a class="d-block" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TOP CAROUSEL END -->
+
+      <!-- ABOUT START -->
+      <div class="main-about container-fluid px-0">
+        <div class="container">
+          <h2 class="mb-4">О нас</h2>
+          <div class="row">
+            <div class="col-lg col-md-12 order-lg-2 mb-5">
+              <div
+                class="row g-4 justify-content-lg-end justify-content-md-center"
+              >
+                <div class="col-5 text-center">
+                  <p class="text-primary mb-1 main-about__value">10</p>
+                  <span class="main-about__description">фирменных салонов</span>
+                </div>
+                <div class="col-5 text-center">
+                  <p class="text-primary mb-1 main-about__value">20</p>
+                  <span class="main-about__description">лет на рынке</span>
+                </div>
+                <div class="col-5 text-center">
+                  <p class="text-primary mb-1 main-about__value">35k</p>
+                  <span class="main-about__description"
+                    >реализованных проектов</span
+                  >
+                </div>
+                <div class="col-5 text-center">
+                  <p class="text-primary mb-1 main-about__value">185</p>
+                  <span class="main-about__description">сотрудников</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg col-md-12 order-lg-1">
+              <p class="mb-4">
+                Мы, компания "Шеф Кухни" - лидер в индустрии кухонной мебели в
+                Беларуси и России, работаем на рынке уже более двух десятилетий.
+                Мы гордо занимаем позицию официальных представителей
+                высококачественных фабрик, таких как «ЗОВ», «GeosIdeal» и
+                «VogelBaum».
+              </p>
+              <p class="mb-4">
+                С годами наша компания разработала и успешно установила более
+                35000 проектов кухонной мебели. Более того, 75% наших клиентов
+                пришли к нам посредством рекомендаций, что подтверждает высокую
+                степень качества наших услуг.
+              </p>
+              <a href="#">подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ABOUT END -->
+
+      <!-- FILTER START -->
+      <div class="main-filter container-fluid px-0" id="mainFilter">
+        <div class="container">
+          <h2 class="mb-4">Какая мебель вам необходима?</h2>
+          <div class="row">
+            <div class="col-6 col-lg-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="mainFilterType"
+                id="mainFilterType1"
+                value="2"
+              />
+              <label class="form-check-label" for="mainFilterType1">
+                <img
+                  class="img-fluid"
+                  src="/assets/images/pages/main-filter-1.png"
+                  alt=""
+                />
+              </label>
+            </div>
+            <div class="col-6 col-lg-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="mainFilterType"
+                id="mainFilterType2"
+                value="2"
+              />
+              <label class="form-check-label" for="mainFilterType2">
+                <img
+                  class="img-fluid"
+                  src="/assets/images/pages/main-filter-2.png"
+                  alt=""
+                />
+              </label>
+            </div>
+            <div class="col-6 col-lg-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="mainFilterType"
+                id="mainFilterType3"
+                value="3"
+              />
+              <label class="form-check-label" for="mainFilterType3">
+                <img
+                  class="img-fluid"
+                  src="/assets/images/pages/main-filter-3.png"
+                  alt=""
+                />
+              </label>
+            </div>
+            <div class="col-6 col-lg-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="mainFilterType"
+                id="mainFilterType4"
+                value="4"
+              />
+              <label class="form-check-label" for="mainFilterType4">
+                <img
+                  class="img-fluid"
+                  src="/assets/images/pages/main-filter-4.png"
+                  alt=""
+                />
+              </label>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <div>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="mainFilterType"
+                id="mainFilterType5"
+                value="5"
+              />
+              <label class="form-check-label" for="mainFilterType5">
+                Другое
+              </label>
+            </div>
+            <div class="d-flex gap-2 ms-auto">
+              <button class="btn btn-ch-primary">назад</button>
+              <button class="btn btn-ch-primary">далее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FILTER END -->
+
+      <!-- START STYLES -->
+      <div class="main-styles container-fluid px-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 order-2 mt-md-auto">
+              <h3 class="featurette-heading fw-normal lh-1">
+                Современный стиль
+              </h3>
+              <p>
+                Мы гарантируем качество материалов и сборки кухонь и
+                подтверждаем это длительными гарантиями.
+              </p>
+              <button class="btn btn-ch-primary">Найти свою кухню</button>
+            </div>
+            <div class="col-md-6 order-1">
+              <img
+                class="img-fluid w-100"
+                src="/assets/images/pages/style-2.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 order-md-1 order-2 mt-md-auto">
+              <h3 class="featurette-heading fw-normal lh-1">
+                Неоклассический стиль
+              </h3>
+              <p>
+                Мы гарантируем качество материалов и сборки кухонь и
+                подтверждаем это длительными гарантиями.
+              </p>
+              <button class="btn btn-ch-primary">Найти свою кухню</button>
+            </div>
+            <div class="col-md-6 order-md-2 order-1">
+              <img
+                class="img-fluid w-100"
+                src="/assets/images/pages/style-1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 order-2 mt-md-auto">
+              <h3 class="featurette-heading fw-normal lh-1">
+                Классический стиль
+              </h3>
+              <p>
+                Мы гарантируем качество материалов и сборки кухонь и
+                подтверждаем это длительными гарантиями.
+              </p>
+              <button class="btn btn-ch-primary">Найти свою кухню</button>
+            </div>
+            <div class="col-md-6 order-1">
+              <img
+                class="img-fluid w-100"
+                src="/assets/images/pages/style-2.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- /END STYLES -->
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <div class="container-xl">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <a href="#"><img src="/assets/images/logo.svg" /></a>
+          </div>
+          <ul
+            class="footer__navigation list-unstyled d-flex flex-column flex-xl-row align-items-start align-items-xl-center justify-content-between"
+          >
+            <li>
+              <a href="#">Кухник</a>
+            </li>
+            <li>
+              <a href="#">Корпусная мебель</a>
+            </li>
+            <li>
+              <a href="#">Портфолио</a>
+            </li>
+            <li>
+              <a href="#">О нас</a>
+            </li>
+            <li>
+              <a href="#">Акции</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="footer__contacts list-unstyled d-flex flex-column">
+            <li>
+              <a
+                class="text-decoration-none"
+                href="tel:+375297271010"
+                rel="nofollow"
+              >
+                <img
+                  src="/assets/images/icons/a1.svg"
+                  class="rounded float-start"
+                />
+                +375 (29) 727-10-10
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-decoration-none"
+                href="tel:+375447271010"
+                rel="nofollow"
+              >
+                <img
+                  src="/assets/images/icons/mts.svg"
+                  class="rounded float-start"
+                />
+                +375 (44) 727-10-10
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-decoration-none"
+                href="mailto:info@shefkuhni.by"
+                rel="nofollow"
+              >
+                <img
+                  src="/assets/images/icons/email.svg"
+                  class="rounded float-start"
+                />
+                info@shefkuhni.by
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="footer__socials list-unstyled d-flex justify-content-lg-between"
+          >
+            <li>
+              <a href="#">
+                <img
+                  src="/assets/images/icons/facebook.svg"
+                  class="rounded float-start"
+                  alt="..."
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="/assets/images/icons/vk.svg"
+                  class="rounded float-start"
+                  alt="..."
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="/assets/images/icons/p.svg"
+                  class="rounded float-start"
+                  alt="..."
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="/assets/images/icons/inst.svg"
+                  class="rounded float-start"
+                  alt="..."
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="/assets/images/icons/youtybe.svg"
+                  class="rounded float-start"
+                  alt="..."
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="/assets/images/icons/odn.svg"
+                  class="rounded float-start"
+                  alt="..."
+                />
+              </a>
+            </li>
+          </ul>
+          <ul class="footer__public-offers list-unstyled">
+            <li><a href="#">Договор публичной оферты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+          <div class="footer__shops d-flex flex-column justify-content-center">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Минск
               </button>
               <ul class="dropdown-menu">
-                <li><button class="dropdown-item" type="button">Минск</button></li>
-                <li><button class="dropdown-item" type="button">Москва</button></li>
-                <li><button class="dropdown-item" type="button">Алматы</button></li>
-                <li><button class="dropdown-item" type="button">Брянск</button></li>
-                <li><button class="dropdown-item" type="button">Актау</button></li>
-                <li><button class="dropdown-item" type="button">Волгоград</button></li>
-                <li><button class="dropdown-item" type="button">Калуга</button></li>
-                <li><button class="dropdown-item" type="button">Курск</button></li>
-                <li><button class="dropdown-item" type="button">Воронеж</button></li>
-                <li><button class="dropdown-item" type="button">Мозырь</button></li>
-                <li><button class="dropdown-item" type="button">Солигорск</button></li>
-                <li><button class="dropdown-item" type="button">Нур-Султан</button></li>
+                <li>
+                  <button class="dropdown-item" type="button">Минск</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Москва</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Алматы</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Брянск</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Актау</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Волгоград</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Калуга</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Курск</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Воронеж</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Мозырь</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">Солигорск</button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">
+                    Нур-Султан
+                  </button>
+                </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <nav class="header__navigation d-none d-lg-block">
-      <div class="container">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col-10 col-xl-8 d-flex pt-1">
-            <ul class="nav flex-grow-1 justify-content-between">
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Кухни</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Корпусная мебель</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Портфолио</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Покупателям</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Акции</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Контакты</a> </li>
-            </ul>
-          </div>
-          <div class="col d-none d-xl-flex pt-3 justify-content-end">
-            <ul class="header__phones list-unstyled mb-0">
+            <ul class="footer__shops-list list-unstyled">
+              <li><a href="#">г. Минск, ул. Богдановича, 53</a></li>
+              <li><a href="#">г. Минск, ул. Я. Коласа, 50/1</a></li>
               <li>
-                <img src="/assets/images/icons/a1.svg" class="rounded float-start" alt="...">
-                <span>+375 (29) 727-10-10</span>
+                <a href="#"
+                  >БЦ “S.Union” , Новодворский сельсовет, 40 ( ст.м.
+                  Могилевская)</a
+                >
               </li>
               <li>
-                <img src="/assets/images/icons/mts.svg" class="rounded float-start" alt="...">
-                <span>+375 (44) 727-10-10</span>
+                <a href="#"
+                  >г. Минск, ул. Тимирязева, 123/1, павильон № 58 ( 2 этаж), ТЦ
+                  “Ждановичи”</a
+                >
               </li>
+              <li><a href="#">г. Минск, пр-т. Победителей, 129</a></li>
             </ul>
           </div>
         </div>
       </div>
-    </nav>
-    <nav class="header__mobile navbar fixed-top d-lg-none">
-      <div class="container-fluid">
-        <div class="header__logo">
-          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
-            <img src="/assets/images/logo.svg" alt="">
-          </a>
-        </div>
-        <div class="ms-5">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Минск
-            </button>
-            <ul class="dropdown-menu">
-              <li><button class="dropdown-item" type="button">Минск</button></li>
-              <li><button class="dropdown-item" type="button">Москва</button></li>
-              <li><button class="dropdown-item" type="button">Алматы</button></li>
-              <li><button class="dropdown-item" type="button">Брянск</button></li>
-              <li><button class="dropdown-item" type="button">Актау</button></li>
-              <li><button class="dropdown-item" type="button">Волгоград</button></li>
-              <li><button class="dropdown-item" type="button">Калуга</button></li>
-              <li><button class="dropdown-item" type="button">Курск</button></li>
-              <li><button class="dropdown-item" type="button">Воронеж</button></li>
-              <li><button class="dropdown-item" type="button">Мозырь</button></li>
-              <li><button class="dropdown-item" type="button">Солигорск</button></li>
-              <li><button class="dropdown-item" type="button">Нур-Султан</button></li>
-            </ul>
-          </div>
-        </div>
-        <div class="me-4 ms-auto">
-          <span class="navbar-phone-icon"></span>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavbar"
-          aria-controls="mobileNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNavbar" aria-labelledby="mobileNavbarLabel">
-          <div class="offcanvas-header">
-            <button type="button" class="navbar-closer btn-close btn-close-white ms-auto me-3"
-              data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Кухни</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Корпусная мебель</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Портфолио</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Покупателям</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Акции</a> </li>
-              <li class="nav-item"> <a class="nav-link px-2" href="#">Контакты</a> </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!-- NAVIGATION END -->
-
-  <main>
-    <div class="main-banner container-fluid position-absolute">
-      <div class="info d-flex align-items-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h1>Шеф Кухни</h1>
-              <p>
-                Не просто мебель, а пространство объединяющее всё
-              </p>
-              <a href="#" class=" btn btn-ch-primary">В каталог</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOP CAROUSEL START -->
-    <div class="main-carousel carousel slide" id="mainCarouselCaptions" data-bs-ride="true">
-      <div class="carousel-indicators">
-        <div class="row flex-grow-1">
-          <button class="col-2 flex-grow-1 active" type="button" data-bs-target="#mainCarouselCaptions"
-            data-bs-slide-to="0" aria-label="Slide 1" aria-current="true"></button>
-          <button class="col-2 flex-grow-1" type="button" data-bs-target="#mainCarouselCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button class="col-2 flex-grow-1" type="button" data-bs-target="#mainCarouselCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-          <button class="col-2 flex-grow-1" type="button" data-bs-target="#mainCarouselCaptions" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
-          <button class="col-2 flex-grow-1" type="button" data-bs-target="#mainCarouselCaptions" data-bs-slide-to="4"
-            aria-label="Slide 5"></button>
-          <button class="col-2 flex-grow-1" type="button" data-bs-target="#mainCarouselCaptions" data-bs-slide-to="5"
-            aria-label="Slide 6"></button>
-        </div>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="assets/images/pages/top-main-bg.png"
-            alt="Image">
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <span>Новогодние скидки</span>
-              <h3>до 45%</h3>
-              <span>на кухни месяца до 31.12</span>
-              <a class="d-block" href="#">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="assets/images/pages/top-main-bg.png"
-            alt="Image">
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <span>Новогодние скидки</span>
-              <h3>до 45%</h3>
-              <span>на кухни месяца до 31.12</span>
-              <a class="d-block" href="#">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="assets/images/pages/top-main-bg.png"
-            alt="Image">
-          <div class="container">
-            <div class="carousel-caption text-center">
-              <span>Новогодние скидки</span>
-              <h3>до 45%</h3>
-              <span>на кухни месяца до 31.12</span>
-              <a class="d-block" href="#">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="assets/images/pages/top-main-bg.png"
-            alt="Image">
-          <div class="container">
-            <div class="carousel-caption text-center">
-              <span>Новогодние скидки</span>
-              <h3>до 45%</h3>
-              <span>на кухни месяца до 31.12</span>
-              <a class="d-block" href="#">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="assets/images/pages/top-main-bg.png"
-            alt="Image">
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <span>Новогодние скидки</span>
-              <h3>до 45%</h3>
-              <span>на кухни месяца до 31.12</span>
-              <a class="d-block" href="#">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="assets/images/pages/top-main-bg.png"
-            alt="Image">
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <span>Новогодние скидки</span>
-              <h3>до 45%</h3>
-              <span>на кухни месяца до 31.12</span>
-              <a class="d-block" href="#">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- TOP CAROUSEL END -->
-
-    <!-- ABOUT START -->
-    <div class="main-about container-fluid px-0">
-      <div class="container">
-        <h2 class="mb-4">О нас</h2>
-        <div class="row">
-          <div class="col-lg col-md-12 order-lg-2 mb-5">
-            <div class="row g-4 justify-content-lg-end justify-content-md-center">
-              <div class="col-5 text-center">
-                <p class="text-primary mb-1 main-about__value">10</p>
-                <span class="main-about__description">фирменных салонов</span>
-              </div>
-              <div class="col-5 text-center">
-                <p class="text-primary mb-1 main-about__value">20</p>
-                <span class="main-about__description">лет на рынке</span>
-              </div>
-              <div class="col-5 text-center">
-                <p class="text-primary mb-1 main-about__value">35k</p>
-                <span class="main-about__description">реализованных проектов</span>
-              </div>
-              <div class="col-5 text-center">
-                <p class="text-primary mb-1 main-about__value">185</p>
-                <span class="main-about__description">сотрудников</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg col-md-12 order-lg-1">
-            <p class="mb-4">
-              Мы, компания "Шеф Кухни" - лидер в индустрии кухонной мебели в Беларуси и России, работаем на рынке уже
-              более двух десятилетий. Мы гордо занимаем позицию официальных представителей высококачественных фабрик,
-              таких как «ЗОВ», «GeosIdeal» и «VogelBaum».
-            </p>
-            <p class="mb-4">
-              С годами наша компания разработала и успешно установила более 35000 проектов кухонной мебели. Более того,
-              75% наших клиентов пришли к нам посредством рекомендаций, что подтверждает высокую степень качества наших
-              услуг.
-            </p>
-            <a href="#">подробнее</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- ABOUT END -->
-
-    <!-- FILTER START -->
-    <div class="main-filter container-fluid px-0" id="mainFilter">
-      <div class="container">
-        <h2 class="mb-4">Какая мебель вам необходима?</h2>
-        <div class="row">
-          <div class="col-6 col-lg-3">
-            <input class="form-check-input" type="radio" name="mainFilterType" id="mainFilterType1" value="2">
-            <label class="form-check-label" for="mainFilterType1">
-              <img class="img-fluid" src="/assets/images/pages/main-filter-1.png" alt="">
-            </label>
-          </div>
-          <div class="col-6 col-lg-3">
-            <input class="form-check-input" type="radio" name="mainFilterType" id="mainFilterType2" value="2">
-            <label class="form-check-label" for="mainFilterType2">
-              <img class="img-fluid" src="/assets/images/pages/main-filter-2.png" alt="">
-            </label>
-          </div>
-          <div class="col-6 col-lg-3">
-            <input class="form-check-input" type="radio" name="mainFilterType" id="mainFilterType3" value="3">
-            <label class="form-check-label" for="mainFilterType3">
-              <img class="img-fluid" src="/assets/images/pages/main-filter-3.png" alt="">
-            </label>
-          </div>
-          <div class="col-6 col-lg-3">
-            <input class="form-check-input" type="radio" name="mainFilterType" id="mainFilterType4" value="4">
-            <label class="form-check-label" for="mainFilterType4">
-              <img class="img-fluid" src="/assets/images/pages/main-filter-4.png" alt="">
-            </label>
-          </div>
-        </div>
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <div>
-            <input class="form-check-input" type="radio" name="mainFilterType" id="mainFilterType5" value="5">
-            <label class="form-check-label" for="mainFilterType5">
-              Другое
-            </label>
-          </div>
-          <div class="d-flex gap-2 ms-auto">
-            <button class="btn btn-ch-primary">назад</button>
-            <button class="btn btn-ch-primary">далее</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- FILTER END -->
-
-    <!-- START STYLES -->
-    <div class="main-styles container-fluid px-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 order-2 mt-md-auto">
-            <h3 class="featurette-heading fw-normal lh-1">
-              Современный стиль
-            </h3>
-            <p>
-              Мы гарантируем качество материалов и сборки кухонь
-              и подтверждаем это длительными гарантиями.
-            </p>
-            <button class="btn btn-ch-primary">Найти свою кухню</button>
-          </div>
-          <div class="col-md-6 order-1">
-            <img class="img-fluid w-100" src="/assets/images/pages/style-2.png" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 order-md-1 order-2 mt-md-auto">
-            <h3 class="featurette-heading fw-normal lh-1">
-              Неоклассический стиль
-            </h3>
-            <p>
-              Мы гарантируем качество материалов и сборки кухонь
-              и подтверждаем это длительными гарантиями.
-            </p>
-            <button class="btn btn-ch-primary">Найти свою кухню</button>
-          </div>
-          <div class="col-md-6 order-md-2 order-1">
-            <img class="img-fluid w-100" src="/assets/images/pages/style-1.png" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 order-2 mt-md-auto">
-            <h3 class="featurette-heading fw-normal lh-1">
-              Классический стиль
-            </h3>
-            <p>
-              Мы гарантируем качество материалов и сборки кухонь
-              и подтверждаем это длительными гарантиями.
-            </p>
-            <button class="btn btn-ch-primary">Найти свою кухню</button>
-          </div>
-          <div class="col-md-6 order-1">
-            <img class="img-fluid w-100" src="/assets/images/pages/style-2.png" alt="">
-          </div>
-        </div>
-        <!-- /END STYLES -->
-      </div>
-    </div>
-  </main>
-
-
-
-  <!-- FOOTER START -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__content">
-        <div class="footer__logo">
-          <a href="#"><img src="/assets/images/logo.svg"></a>
-        </div>
-        <ul class="footer__navigation footer__links list-unstyled mb-0 pl-0">
-          <li><a href="#">Кухни</a></li>
-          <li><a href="#">Корпусная мебель</a></li>
-          <li><a href="#">Портфолио</a></li>
-          <li><a href="#">Покупателям</a></li>
-          <li><a href="#">Акции</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <div class="footer__contacts d-flex">
-          <ul class="footer__links list-unstyled mb-0 pl-0 flex-grow-1">
-            <li><a href="#">Архитектору и дизайнеру</a></li>
-            <li><a href="#">Франшиза</a></li>
-            <li><a href="#">Салоны</a></li>
-          </ul>
-          <div class="d-none d-xl-flex flex-column align-items-stretch">
-            <button class="btn btn-ch-primary mb-1">Заказать звонок</button>
-            <button class="btn btn-ch-primary">Рассчитать стоимость</button>
-          </div>
-          <ul class="phones list-unstyled mb-0 pl-0">
-            <li>
-              <a href="#">
-                <img src="/assets/images/icons/a1.svg" class="rounded float-start" alt="...">
-              </a>
-              <span>+375 (29) 727-10-10</span>
-            </li>
-            <li>
-              <a href="#">
-                <img src="/assets/images/icons/mts.svg" class="rounded float-start" alt="...">
-              </a>
-              <span>+375 (44) 727-10-10</span>
-            </li>
-            <li>
-              <a href="#">
-                <img src="/assets/images/icons/email.svg" class="rounded float-start" alt="...">
-              </a>
-              <span>info@shefkuhni.by</span>
-            </li>
-          </ul>
-        </div>
-        <ul class="footer__public-offers footer__links list-unstyled mb-0 pl-0">
-          <li><a href="#">Договор публичной оферты</a></li>
-          <li><a href="#">Политика конфиденциальности</a></li>
-        </ul>
-        <ul class="footer__socials socials list-unstyled mb-0 pl-0">
-          <li>
-            <a href="#">
-              <img src="/assets/images/icons/facebook.svg" class="rounded float-start" alt="...">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="/assets/images/icons/vk.svg" class="rounded float-start" alt="...">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="/assets/images/icons/p.svg" class="rounded float-start" alt="...">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="/assets/images/icons/inst.svg" class="rounded float-start" alt="...">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="/assets/images/icons/youtybe.svg" class="rounded float-start" alt="...">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="/assets/images/icons/odn.svg" class="rounded float-start" alt="...">
-            </a>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </footer>
-  <!-- FOOTER END -->
-</body>
-
+    </footer>
+    <!-- FOOTER END -->
+  </body>
 </html>
