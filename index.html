@@ -22,6 +22,20 @@
         >
           <img src="/assets/images/logo.svg" alt="" />
         </a>
+        <div class="nav-actions d-flex d-lg-none ms-auto me-4">
+          <a class="nav-action-item text-decoration-none" href="#">
+            <img
+              src="/assets/images/icons/search.svg"
+              class="rounded float-start"
+            />
+          </a>
+          <a class="nav-action-item text-decoration-none" href="#">
+            <img
+              src="/assets/images/icons/phone.svg"
+              class="rounded float-start"
+            />
+          </a>
+        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -103,7 +117,9 @@
                 <a class="nav-link" href="#">Контакты</a>
               </li>
             </ul>
-            <ul class="phones list-unstyled my-0 d-flex flex-column">
+            <ul
+              class="nav-phones list-unstyled mx-auto my-0 d-none d-xl-flex flex-column"
+            >
               <li>
                 <a
                   class="text-decoration-none"
@@ -131,12 +147,23 @@
                 </a>
               </li>
             </ul>
-            <a class="text-decoration-none ms-5" href="#">
-              <img
-                src="/assets/images/icons/search.svg"
-                class="rounded float-start"
-              />
-            </a>
+            <div class="nav-actions d-lg-flex d-none mx-auto">
+              <a class="nav-action-item text-decoration-none" href="#">
+                <img
+                  src="/assets/images/icons/search.svg"
+                  class="rounded float-start"
+                />
+              </a>
+              <a
+                class="nav-action-item text-decoration-none d-block d-xl-none"
+                href="#"
+              >
+                <img
+                  src="/assets/images/icons/phone.svg"
+                  class="rounded float-start"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
