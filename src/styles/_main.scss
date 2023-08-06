@@ -1,14 +1,29 @@
-.main {
-    h2 {
-        &:before {
-            content: "";
-            display: block;
-            width: 25%;
-            height: 1px;
-            background: $red;
-        }
+.section-header {
+    font-size: 60px;
+    font-weight: 500;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 25%;
+        height: 1px;
+        background: $red;
     }
 
+    @include media-breakpoint-down(xl) {
+        font-size: 50px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        font-size: 40px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        font-size: 35px;
+    }
+}
+
+.main {
     &-banner {
         color: $white;
         inset: 0;

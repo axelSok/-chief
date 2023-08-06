@@ -1,7 +1,15 @@
 .navigation {
     height: $header-height;
-    background: rgba($dark-gray, 0.8);
+    background: $dark-gray;
     color: $white;
+
+    @include media-breakpoint-down(lg) {
+        height: 63px;
+    }
+
+    // @include media-breakpoint-down(lg) {
+    //     font-size: 35px;
+    // }
 
     .nav-phones {
         font-size: 16px;
@@ -34,6 +42,16 @@
     .navbar {
         &-brand {
             height: $header-height;
+
+
+
+            @include media-breakpoint-down(lg) {
+                height: 63px;
+
+                img {
+                    max-height: 80px;
+                }
+            }
         }
 
         &-toggler,
@@ -52,14 +70,54 @@
         }
     }
 
-    .nav-link {
-        font-size: 18px;
-        font-weight: 700;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+        color: $red;
+    }
 
-        @include media-breakpoint-down(xxl) {
-            font-size: 16px;
+    .nav {
+        &-link {
+            font-size: 18px;
+            font-weight: 700;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+
+            @include media-breakpoint-down(xxl) {
+                font-size: 16px;
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+
+
+        }
+
+        &-item {
+            .dropdown-menu {
+                border-radius: 0;
+                border: none;
+                background: $dark-gray;
+
+                .dropdown-item:hover,
+                .dropdown-item:focus {
+                    background: inherit;
+                    color: $red;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    color: $white;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+
+            .dropdown-toggle::after {
+                display: none;
+            }
         }
     }
 
@@ -88,122 +146,3 @@
         margin-top: 0;
     }
 }
-
-// .header {
-//     $root: &;
-
-//     transition: all 0.5s ease;
-//     color: $white;
-
-//     &--scrolled {
-//         top: -#{$header-bar-height};
-
-//         #{$root}__logo {
-//             img {
-//                 display: none;
-//             }
-//         }
-
-//         #{$root}__navigation {
-//             background: $dark-gray;
-//             height: $header-height;
-//             transition: all 0.5s ease;
-//         }
-//     }
-
-//     &__top-bar,
-//     &__mobile {
-//         background: rgba($dark-gray, 0.8);
-//         height: $header-bar-height;
-//         font-size: 14px;
-//     }
-
-//     &__logo {
-//         height: $header-bar-height;
-//     }
-
-//     &__navigation {
-//         font-size: 18px;
-//         font-weight: 700;
-
-//         @include media-breakpoint-down(xl) {
-//             font-size: 16px;
-//         }
-//     }
-
-//     &__mobile {
-//         font-size: 16px;
-//         font-weight: 700;
-
-//         @include media-breakpoint-down(md) {
-//             font-size: 14px;
-//         }
-//     }
-
-//     &__phones {
-//         font-size: 16px;
-//         font-weight: 400;
-
-//         img {
-//             height: 18px;
-//             width: 18px;
-//         }
-
-//         li {
-//             display: flex;
-//             align-items: center;
-//         }
-//     }
-
-//     // Bootstrap navbar
-//     .nav-link {
-//         color: $white;
-//         text-decoration: none;
-
-//         &:hover {
-//             color: $red;
-//         }
-//     }
-
-//     .navbar {
-
-//         &-toggler,
-//         &-closer {
-//             border: none;
-//             font-size: 20px;
-
-//             &:focus {
-//                 outline: none;
-//                 box-shadow: none;
-//             }
-
-//             &-icon {
-//                 background-image: url('../../assets/images/icons/burger-menu.svg');
-//             }
-//         }
-
-//         &-phone {
-//             &-icon {
-//                 display: inline-block;
-//                 width: 1.5em;
-//                 height: 1.5em;
-//                 vertical-align: middle;
-//                 background-image: url('../../assets/images/icons/phone.svg');
-//                 background-repeat: no-repeat;
-//                 background-position: center;
-//                 background-size: 100%;
-//             }
-//         }
-//     }
-
-
-
-//     // Bootstrap mobile menu
-//     .offcanvas {
-//         background: $dark-gray;
-
-//         &-header {
-//             height: $header-bar-height;
-//         }
-//     }
-// }
